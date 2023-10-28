@@ -27,9 +27,8 @@ var largestAltitude = function(gain) {
     //we iterate through gains
     for(let i = 0; i < gain.length; i++) {
         let newAlt = lastAlt + gain[i];
-        lastAlt = altitudes[i + 1];
-
-        if(newAlt > maxAlt) maxAlt = lastAlt;
+        if(newAlt > maxAlt) maxAlt = newAlt;
+        lastAlt = newAlt;
     }
 
     return maxAlt;

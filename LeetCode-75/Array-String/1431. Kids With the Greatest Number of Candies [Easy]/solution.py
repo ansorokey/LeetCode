@@ -21,3 +21,4 @@ def kidsWithCandies(candies: List[int], extraCandies: int) -> List[bool]:
 # Submission:
 # time: 49ms - 27.87%
 # space: 17.3mb - 18.11%
+# runtime: O(n)

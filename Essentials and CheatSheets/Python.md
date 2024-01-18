@@ -39,3 +39,11 @@ if a and b:
 if not a:
     pass
 ```
+## Comprehension
+```py
+a = [i for i in range(5)] # [1, 2, 3, 4, 5]
+
+b = [x for x in numList if x % 2 == 0]
+
+c = ['uppercase' if j.isUpper() else 'lowercase' for j in characters]
+```

@@ -37,3 +37,20 @@ this works until we use an edge case where there is a huge spike in the middle, 
 [1, 100, 2, 3] 
 We need some way of bypassing huge spikes, or some way of going back to the second value.
 If we nest the third loop into the second, that'll go back to the first larger value
+
+Okay, that works. Now in the most outer loop, we're checking each individual value. There's no reason to chec a value GREATER than the first, right? So we should set the first value to the very first index nd only perform additional checks on values smaller.
+
+Okay, now we're only checking values smaller than or equal to the first or smallest value. I don't like how nested this is, though. Let's see if it passes a large input. 
+
+It does not. So what can we do to reduce the runtime on this? We'll need to look at it differently.
+
+We don't need to store and collect values. We just need to iterate through until we hit a result. How wold we do this on a large scale?
+
+I watched a video and this turns out to be so much more sraightforward than I thought.
+Raher than constantly looking for the max value, we just need to look for the the smalest values and comparing them to the next biggest.
+
+I think we were heading in the right direction with a first and second value, and only returnin true at the end of the comparisons.
+In the video's approach, he went through once.
+At each step of the way, he cheked if the current value was smaller than the smallest. If it wasn't, is it smaller tan the next smallest? If it wasn't, then it must be bigger than the previous three, and he returns true.
+
+In retrospect, the brte force we came up with just needed some improved logic to it. Close! Learned a lesson for the next time we see a similar problem pattern.

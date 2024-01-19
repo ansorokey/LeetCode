@@ -28,6 +28,7 @@ for i in range(start, stop, step):
 for c in string:
     pass
 ```
+
 Conditionals
 ```py
 if a or b:
@@ -39,6 +40,17 @@ if a and b:
 if not a:
     pass
 ```
+## Arrays(Lists)
+```py
+a = []
+
+# of n length
+b = [val] * n
+
+# concatenation
+c = [1] + [2] + [3]
+```
+
 ## Comprehension
 ```py
 a = [i for i in range(5)] # [1, 2, 3, 4, 5]

@@ -1,4 +1,4 @@
-Declaring Variables:
+## Declaring Variables:
 ```py
 a = 7
 a = 8
@@ -7,12 +7,12 @@ x = y = z = 0
 i, j = 0, 0
 ```
 
-Printing:
+## Printing:
 ```py
 print(a, b, c)
 ```
 
-Iteration:
+## Iteration:
 ```py
 # Ranges
 for i in range(x):
@@ -27,9 +27,12 @@ for i in range(start, stop, step):
 # Items
 for c in string:
     pass
+
+for (x, y) in enum(iterable):
+    pass
 ```
 
-Conditionals
+## Conditionals
 ```py
 if a or b:
     pass
@@ -40,6 +43,7 @@ if a and b:
 if not a:
     pass
 ```
+
 ## Arrays(Lists)
 ```py
 a = []
@@ -49,6 +53,12 @@ b = [val] * n
 
 # concatenation
 c = [1] + [2] + [3]
+
+# length
+len(l)
+
+# convert to a list
+list(iterableObject)
 ```
 
 ## Comprehension

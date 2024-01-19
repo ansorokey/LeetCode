@@ -7,6 +7,13 @@ x = y = z = 0
 i, j = 0, 0
 ```
 
+## Special Variables
+```py
+# infinity
+posInf = float('inf')
+negInf = float('-inf')
+```
+
 ## Printing:
 ```py
 print(a, b, c)

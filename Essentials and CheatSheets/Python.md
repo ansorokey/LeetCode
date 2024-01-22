@@ -51,6 +51,15 @@ if not a:
     pass
 ```
 
+## Strings
+```py
+# Split string on every char
+a = [*string]
+
+# Split string on specific char
+b = string.split('x')
+```
+
 ## Arrays(Lists)
 ```py
 a = []

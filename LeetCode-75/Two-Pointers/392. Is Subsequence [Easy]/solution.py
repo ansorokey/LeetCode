@@ -22,6 +22,6 @@ print(foo('ca', 'bcdea')) # true
 
 
 # Submission:
-# Time:
-# Space:
-# Runtime:
+# Time: 31ms - 91.59%
+# Space: 16.6mb - 60.54%
+# Runtime: O(n)

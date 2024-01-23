@@ -27,10 +27,20 @@ def foo(nums):
 foo([0, 1, 0, 3, 12])
 foo([1, 0])
 foo([1, 2, 3, 1])
-foo([0, 0, 0, 0, 0, 1])
-
 
 # Submission:
 # Time: 123ms - 89.60%
 # Space: 18.1mb 56.97%
 # Runtime:
+
+def bar(nums):
+    l = 0
+    for r in range(len(nums)):
+        if nums[r]:
+            print('swapped', nums[l], nums[r])
+            nums[l], nums[r] = nums[r], nums[l]
+            l += 1
+
+    print(nums)
+
+bar([1, 2, 0, 3, 4])

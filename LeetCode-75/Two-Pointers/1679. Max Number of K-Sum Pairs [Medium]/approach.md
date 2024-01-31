@@ -26,3 +26,16 @@ Both the current and partner numbers need to not be counted anymore.
 
 So let's go back to the first approach.
 Iterate through once, and see if we've passed a partner.
+I'm thinking this will MOSTLY workm but I think we'l run into an issue where the could be multiple partners and we end up wiping them all when we remove a digit
+For example, [2, 2, 4, 4]
+When we get to 4, we've added two 2's, but to remove t, we'll need to remove both 2's, leaving nothing for the next 4.
+So how can we track multiple of the same digit while removing only the ones we need?
+Rather than keeing track of the index? How abot we keep track of it as a counter?
+And when we come across a pair, we decrememnt that counter by 1.
+So there would be 2 2's
+When we come across 4 #1, then there are 1 2's
+When we come across the second, there ould be 0 2's
+If we come across a tird, the digit would be in the hashmap, but we couldn't decrement it any further
+let's try that
+
+It works and passes!

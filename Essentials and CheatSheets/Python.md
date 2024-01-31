@@ -85,3 +85,15 @@ b = [x for x in numList if x % 2 == 0]
 
 c = ['uppercase' if j.isUpper() else 'lowercase' for j in characters]
 ```
+
+## Sets
+```py
+# Make a set
+newSet = {}
+
+# Add to a set
+newSet.add(x)
+
+# Remove from a set
+newSet.remove(x)
+```

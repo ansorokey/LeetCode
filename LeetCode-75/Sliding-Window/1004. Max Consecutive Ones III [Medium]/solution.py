@@ -21,25 +21,40 @@
 
 # Two pointer aproach
 def foo(nums, k):
+    # start all pointers at the beginning of the array
+    # start the biggest length at 0
     maxCount = start = end = 0
+    # I guess we could just modify the original input, it's just a primitive
+    # BUT I don't really like to modify inuts if I dont have to
     flips = k
 
+    # iterate through the array
     while end < len(nums):
-        # Is end on a 0 or a 1
-        # always decrease flips when landing on a zero
+
+        # instead of accounting for if we ave flps or not,
+        # just always decrease flips when landing on a zero
         if nums[end] == 0:
             flips -= 1
+            
+        # Now, we can make those used flips up
+        # all we have to do is get back to zero
+        # which will also make up for if we were never given any flips to begin with
+        while flips < 0:
+            start += 1
+            if nums[start - 1] == 0:
+                flips += 1 
+        # since end and start began at the same index, we dont have to worry about
+        # checkibg if start is stuck on a zero or not
+        # end will have been everything that start could be
+        # so any potential 0s ecountered will always push start forwards
 
-        if flips < 0:
-            while flips < 0:
-                start += 1
-                if nums[start - 1] == 0:
-                    flips += 1 
-
+        # at this point, start may be ahead of end, which is actually okay!
+        # Since we'd get a negative result, it wont ever override the max anyway
         curCount = end - start + 1
         if maxCount < curCount:
             maxCount = curCount
 
+        # advance the end forward
         end += 1
 
     return maxCount

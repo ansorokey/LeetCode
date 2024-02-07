@@ -57,3 +57,5 @@ Oh, well I guess we could just count them again.
 OKAY let's try it
 
 IT WORKS! Not the greatest runtime, but it WORKS!
+
+Okay, but now it's time to refactor. This is way too many parallel loops.

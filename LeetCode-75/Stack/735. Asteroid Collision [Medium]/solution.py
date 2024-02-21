@@ -8,10 +8,14 @@ def foo(asteroids):
             last = res.pop()
 
         # are we colliding?
+        # Collision only occurs between a positive last value and negative current value
         if (last != None and last > 0) and cur < 0:
+            # If an asteroid survices a collision, keep track of it
             survivor = None
+
+            # The right most asteroid (current) could be bigger than all previous asteroids
             while (cur != None and last != None and last > 0) and cur < 0:
-                print(res, last, cur)
+
                 # last survives
                 if cur * -1 > last:
                     survivor = cur
@@ -28,8 +32,8 @@ def foo(asteroids):
                 else:
                     # neither survive
                     # none added
-                    # AND we lose our current asteroid, 
-                    # so we can't check for collision
+                    # AND we lose our current asteroid,
+                    # so we can't check for collision anymore
                     cur = None
                     survivor = None
                     if len(res) > 0:

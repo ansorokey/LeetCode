@@ -24,7 +24,27 @@
 # Space: 17.7mb - 63.74%
 # Runtime: O(n)
 
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # recursive helper function
+        def _reverseList(head, prev=None):
+            if head.next == None:
+                head.next = prev
+                global newHead
+                newHead = head
+                return head
+            
+            newNode = _reverseList(head=head.next, prev=head)
+            head.next = prev
+            return newNode
+        
+        
+        if head == None:
+            return None
+        
+        return _reverseList(head)
+
 # Submission:
-# Time:
-# Space:
-# Runtime:
+# Time: 42ms - 30.89%
+# Space: 17.7mb - 87.57%
+# Runtime: O(n)

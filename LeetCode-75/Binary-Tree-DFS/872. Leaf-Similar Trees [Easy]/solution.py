@@ -37,3 +37,41 @@ class Solution:
 # Time: 34ms - 76.68%
 # Space: 16.6mb - 87.52%
 # Runtime: O(a + b)
+
+
+
+# Iterative approach
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
+        def dfs(root):
+            stack = [root]
+            res = []
+            while stack:
+                cur = stack.pop()
+                
+                if cur.left == None and cur.right == None:
+                    res.append(str(cur.val))
+                    
+                if cur.right:
+                    stack.append(cur.right)
+                    
+                if cur.left:
+                    stack.append(cur.left)
+            
+            return '-'.join(res)
+        
+        seq1 = dfs(root1)
+        seq2 = dfs(root2)
+        
+        return seq1 == seq2
+
+# Submission:
+# Time: 42ms - 21.69%%
+# Space: 16.6mb - 87.52%
+# Runtime: O(a + b)

@@ -75,6 +75,12 @@ len(l)
 
 # convert to a list
 list(iterableObject)
+
+# add to list
+arr.append(x)
+
+# remove from a list
+arr.pop(optional_index)
 ```
 
 ## Comprehension
@@ -88,8 +94,11 @@ c = ['uppercase' if j.isUpper() else 'lowercase' for j in characters]
 
 ## Sets
 ```py
-# Make a set
+# Make a hashMap
 newSet = {}
+
+# Make a set
+newSet = set()
 
 # Add to a set
 newSet.add(x)

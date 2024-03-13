@@ -57,3 +57,26 @@ class Solution:
 # Time: 61ms - 22.23%
 # Space: 18.3mb - 85.64%
 # Runtime:
+
+# EVEN FASTERERRRRRRR
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+        while root:
+            if root == None:
+                return None
+            
+            if root.val == val:
+                return root
+            elif val < root.val:
+                root = root.left
+            else:
+                root = root.right
+                
+        return None

@@ -80,3 +80,32 @@ class Solution:
 # Time: 610ms - 5.05%
 # Space: 20.2mb - 7.81%
 # Runtime: toooo much        
+
+
+# Best solution so far, the string nodes and set was completely unneccessary
+class Solution:
+    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+        self.count = 0
+        self.checked = [False for i in range(len(isConnected))]
+        
+        def check(city):
+            self.checked[city] = True
+            
+            for i in range(len(isConnected[city])):
+                connection = isConnected[city][i]
+                if connection == 1 and self.checked[i] == False:
+                    check(i)
+        #END DEF
+        
+        
+        for city in range(len(isConnected)):
+            if self.checked[city] == False:
+                check(city)
+                self.count += 1
+        
+        return self.count
+
+# Submission:
+# Time: 176ms - 90.51%
+# Space: 17.8mb - 7.81%
+# Runtime:

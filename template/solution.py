@@ -1,7 +1,6 @@
 
 
-
 # Submission:
-# Time:
-# Space:
+# Time: 
+# Space: 
 # Runtime:
